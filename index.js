@@ -2,7 +2,11 @@
 import { createApp, defineComponent, hElement, hFragment, hText, HashRouter, RouterLink, RouterOutlet } from "./node_modules/sleepyo/dist/sleepyo.js";
 import Navbar from "./components/layout/Navbar.js";
 import HeroSection from "./components/hero/Hero.js";
-console.log(Navbar);
+import Notes from "./components/notes/Notes.js";
+import { parseTypescriptFile } from "./utils/parsers.js";
+
+const res = await parseTypescriptFile("./public/notes/sqlInjection.ts");
+console.log(res);
 
 const HomePage = defineComponent({
   render() {
@@ -43,10 +47,9 @@ const ResourcesPage = defineComponent({
 });
 const routes = [
   { path: "/", component: HomePage },
-  { path: "/blog", component: BlogPage },
+  { path: "/notes/:title", component: Notes },
   { path: "/about", component: AboutPage },
   { path: "/resources", component: ResourcesPage },
-  { path: "*", redirect: "/" },
 ];
 
 // Create router instance
@@ -54,16 +57,14 @@ const router = new HashRouter(routes);
 
 // Navbar Component
 
-
 // Hero Section Component
-
 
 // Page Components
 
 // Main App Component
 const App = defineComponent({
   render() {
-    return hElement("div", { class : "container"}, [
+    return hElement("div", { class: "container" }, [
       hElement(Navbar),
       hElement(RouterOutlet),
       hElement("footer", { class: "site-footer" }, [

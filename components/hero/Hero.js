@@ -1,11 +1,17 @@
-import { defineComponent, hElement, RouterLink } from "../../node_modules/sleepyo/dist/sleepyo.js";
+import {
+  defineComponent,
+  hElement,
+  RouterLink,
+} from "../../node_modules/sleepyo/dist/sleepyo.js";
 
 const HeroSection = defineComponent({
   render() {
     return hElement("section", { class: "hero" }, [
       hElement("div", { class: "hero-content" }, [
         hElement("h1", {}, ["Welcome to My Blog"]),
-        hElement("p", {}, ["I hope that i can help you learn more about Web Exploitation !"]),
+        hElement("p", {}, [
+          "I hope that i can help you learn more about Web Exploitation !",
+        ]),
         hElement(
           RouterLink,
           {
