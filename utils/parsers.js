@@ -78,11 +78,11 @@ async function parseTypescriptFile(relativePath) {
 
       if (currentNote) {
         // Note content
-        currentNote.text += (currentNote.text ? "\n" : "") + contentLine;
+        currentNote.text += (currentNote.text ? "\n\n" : "") + contentLine;
       } else if (currentSubsection) {
         // Subsection content
         currentSubsection.text +=
-          (currentSubsection.text ? "\n" : "") + contentLine;
+          (currentSubsection.text ? "\n\n" : "") + contentLine;
       }
     }
   }

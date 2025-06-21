@@ -49,7 +49,7 @@ const routes = [
   { path: "/", component: HomePage },
   { path: "/notes/:title", component: Notes },
   { path: "/about", component: AboutPage },
-  { path: "/resources", component: ResourcesPage },
+  { path: "/writeups", component: ResourcesPage },
 ];
 
 // Create router instance

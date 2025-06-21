@@ -16,7 +16,6 @@
 
 .container {
   width: 100%;
-  padding: 0 1rem;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -53,6 +52,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
+  border-bottom: 2px solid var(--color-sub);
   & * {
     font-weight: 600;
   }
@@ -66,6 +66,7 @@
 
 .navbar-logo {
   color: var(--color-accent);
+  font-size: 1.3rem;
 }
 
 .navbar-links {
@@ -117,24 +118,41 @@
 }
 
 /* notes */
-/* Title hierarchy */
 
 .notes-page {
   display: flex;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 /* side nav */
 
 .side-nav {
+  width: 200px;
   flex-shrink: 0;
+  margin-top: 6rem;
+
+  & ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    border-left: 2px solid var(--color-sub);
+  }
+  & a:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+}
+
+.topic {
+  flex: 1;
 }
 
 .topic h1 {
   color: var(--color-accent);
-  border-bottom: 2px solid var(--color-sub);
   padding-bottom: 0.8rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -171,13 +189,31 @@
 }
 
 /* Content styling */
-.topic-subsection p {
+.topic-subsection pre {
   padding: 1rem;
   margin: 0.8rem 0;
   background: var(--color-sub-alt);
   border-radius: 4px;
   border-left: 2px solid var(--color-sub);
   color: #e2f1f5dd;
+  overflow-x: auto;
+  width: calc(1000px - 1.8rem * 2 - 1rem - 2.2rem);
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sub); /* your background */
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent); /* your accent */
+  border-radius: 4px;
 }
 
 /* Notes section */
@@ -254,7 +290,7 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
-.topic-subsection p:hover {
+.topic-subsection pre:hover {
   background: #0a1928dd;
   border-left: 2px solid var(--color-accent);
 }

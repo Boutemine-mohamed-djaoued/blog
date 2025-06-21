@@ -3,7 +3,7 @@ import { defineComponent, hElement, RouterLink } from "../../node_modules/sleepy
 const Navbar = defineComponent({
   render() {
     return hElement("nav", { class: "navbar" }, [
-      hElement("div", { class: "navbar-logo" }, ["Wep Nap"]),
+      hElement("div", { class: "navbar-logo" }, ["WepNap"]),
 
       hElement("ul", { class: "navbar-links" }, [
         hElement("li", {}, [hElement(RouterLink, { to: "/" }, ["Home"])]),

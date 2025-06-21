@@ -5,20 +5,34 @@ import {
 } from "../../node_modules/sleepyo/dist/sleepyo.js";
 
 const TOPICS = [
-  {
-    key: "sqlInjection",
-    title: "sqlInjection",
-  },
-  {
-    key: "test",
-    title: "test",
-  },
+  { key: "accessControl", title: "Access Control" },
+  { key: "auth", title: "Authentication" },
+  { key: "cachPoinsoning", title: "Cache Poisoning" },
+  { key: "cmdInjectoin", title: "Command Injection" },
+  { key: "fileUpload", title: "File Upload" },
+  { key: "graphql", title: "GraphQL" },
+  { key: "hostHeader", title: "Host Header Injection" },
+  { key: "httpReqSmuggling", title: "HTTP Request Smuggling" },
+  { key: "infoDisclosure", title: "Information Disclosure" },
+  { key: "jwt", title: "JWT" },
+  { key: "noSqlInjection", title: "NoSQL Injection" },
+  { key: "plan", title: "Plan" },
+  { key: "prototypePolution", title: "Prototype Pollution" },
+  { key: "raceConditions", title: "Race Conditions" },
+  { key: "random", title: "Random" },
+  { key: "serializers", title: "Insecure Serializers" },
+  { key: "sqlInjection", title: "SQL Injection" },
+  { key: "ssrf", title: "SSRF" },
+  { key: "ssti", title: "SSTI" },
+  { key: "test", title: "Test" },
+  { key: "xss", title: "XSS " },
+  { key: "xxe", title: "XXE" },
 ];
 
 const sideNav = defineComponent({
   render() {
     return hElement("nav", { class: "side-nav" }, [
-      hElement("h2", {}, ["Web Notes"]),
+      hElement("h2", {}, ["All Topics"]),
       hElement("ul", {}, [
         ...TOPICS.map((topic) => {
           return hElement("li", { key: topic.key }, [
