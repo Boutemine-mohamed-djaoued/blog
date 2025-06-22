@@ -1,10 +1,14 @@
+// Access Control
+//! Exploiting
 //* Broken access control resulting from platform misconfiguration
 // if server accepts these header they will repace the /  in url
 // X-Original-Url: /admin/delete
 // X-Rewrite-URL : /admin
-// note : the params are still written after the url /?username=carlos
+//? Note :
+//  the params are still written after the url /?username=carlos
 //* HTTP methods
-// some endpoints will accept other methods if one if forbidden POST => GET
+// some endpoints will accept other methods if one if forbidden
+// so you can try GET instead of POST
 //* Broken access control resulting from URL-matching discrepancies
 // /ADMIN/DELETEUSER or /admin/deleteUser.anything or /admin/deleteUser/
 //  can bypass the security on /admin/deleteUser

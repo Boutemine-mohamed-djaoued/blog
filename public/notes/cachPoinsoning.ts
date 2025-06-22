@@ -1,25 +1,25 @@
+// Cache Poisoning
 //! Identifying
 //* getting cash headers in the response
 // Cache-Control: public, max-age=31536000
 // X-Cache: HIT
 // X-Cache-Hits: 1
 // Vary : exposes the keyed headers
-//* finding unkeyed inputs (using param miner)
+//* finding unkeyed inputs (using burpsuite param miner)
 // right click => extentions => param miner => Guess headers
 // result found in : installed => param miner => output
 //* finding unkeyed query parameters
 // right click => extentions => param miner => Guess query parameters
 //* Identify a suitable cache oracle
-// An HTTP header that explicitly tells you whether you got a cache hit
 // Unkeyed port
 // Unkeyed query string
 // Unkeyed query parameter (specific one like : utm_content )
 // Observable changes to dynamic content
 // Distinct response times
 // Pragma: akamai-x-get-cache-key || x-get-cache-key => if supported it will return the cache key
+//? note :
+// a cash oracle is unkeyed header that can be used to poison the cache
 //! Exploiting
-// deliver XSS
-// change imports leading to you js files executed
 //* cors
 // Access-Control-Allow-Origin: *
 //* Cache parameter cloaking
@@ -27,7 +27,7 @@
 // the cach will see : example=123
 // and the server will see :example=123?excluded_param=bad-stuff-here
 //* ruby on rails
-//   is accepted as a delimiter
+// ";" is accepted as a delimiter
 // GET /?keyed_param=abc&excluded_param=123;keyed_param=bad-stuff-here
 // the cach will see : keyed_param=abc&excluded_param=123
 // and the server will see : keyed_param=bad-stuff-here&excluded_param=123
@@ -51,13 +51,12 @@
 // Accept: */*, text/cachebuster
 // Cookie: cachebuster=1
 // Origin: https://cachebuster.vulnerable-website.com
-//* will resolve to /
+//* stuff that will resolve to /
 // Apache: GET //
 // Nginx: GET /%2F
 // PHP: GET /index.php/xyz
 // .NET GET /(A(xyz)/
 //! Mitigating
-// know every small thing related to the cach you're using
-// because most third party technologies support unnecessary features that might be exploitable in your case
-// no unkeyed inputs
-// no fat Get request
+//* you need to :
+// know every small thing related to the cach you're using because most third party technologies support unnecessary features that might be exploitable in your case
+// be sure that there is no unkeyed inputs or fat Get request

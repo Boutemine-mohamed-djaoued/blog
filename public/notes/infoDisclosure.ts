@@ -1,5 +1,7 @@
+// Information Disclosure
+//! Identifying
 //* Files for web crawlers
-// /robots.txt and /sitemap.xml;
+// /robots.txt and /sitemap.xml
 //* debug files
 // /cgi-bin/phpinfo.php
 //* Source code disclosure via backup files

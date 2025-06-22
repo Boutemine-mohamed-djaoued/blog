@@ -15,7 +15,7 @@ const HeroSection = defineComponent({
         hElement(
           RouterLink,
           {
-            props: { to: "/blog" },
+            to: "/notes/accessControl",
             class: "cta-button",
           },
           ["Check my web notes"]

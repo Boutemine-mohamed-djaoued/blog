@@ -122,7 +122,7 @@
 .notes-page {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  padding: 2rem 0;
 }
 
 /* side nav */
@@ -143,6 +143,10 @@
     color: var(--color-accent);
     cursor: pointer;
   }
+}
+
+.selected-topic {
+  color: var(--color-accent);
 }
 
 .topic {

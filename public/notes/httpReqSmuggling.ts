@@ -1,4 +1,5 @@
-//? HTTP/1
+// HTTP Request Smuggling
+//! Exploiting
 //* CL.TE vulnerabilities
 // POST / HTTP/1.1
 // Host: vulnerable-website.com

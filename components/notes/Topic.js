@@ -18,7 +18,7 @@ const Topic = defineComponent({
                 { class: "topic-subsection", key: title },
                 [
                   hElement("h3", {}, [title]),
-                  hElement("pre", {}, [text]),
+                  hElement("pre", {}, [hElement("code", {}, [text])]),
                   ...notes.map(({ title, text }) => {
                     return hElement("div", { class: "note" }, [
                       hElement("h4", {}, [title]),

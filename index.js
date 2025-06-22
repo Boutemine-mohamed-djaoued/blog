@@ -5,7 +5,7 @@ import HeroSection from "./components/hero/Hero.js";
 import Notes from "./components/notes/Notes.js";
 import { parseTypescriptFile } from "./utils/parsers.js";
 
-const res = await parseTypescriptFile("./public/notes/sqlInjection.ts");
+const res = await parseTypescriptFile("./public/notes/fileUpload.ts");
 console.log(res);
 
 const HomePage = defineComponent({

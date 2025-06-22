@@ -16,7 +16,6 @@ const TOPICS = [
   { key: "infoDisclosure", title: "Information Disclosure" },
   { key: "jwt", title: "JWT" },
   { key: "noSqlInjection", title: "NoSQL Injection" },
-  { key: "plan", title: "Plan" },
   { key: "prototypePolution", title: "Prototype Pollution" },
   { key: "raceConditions", title: "Race Conditions" },
   { key: "random", title: "Random" },
@@ -24,7 +23,6 @@ const TOPICS = [
   { key: "sqlInjection", title: "SQL Injection" },
   { key: "ssrf", title: "SSRF" },
   { key: "ssti", title: "SSTI" },
-  { key: "test", title: "Test" },
   { key: "xss", title: "XSS " },
   { key: "xxe", title: "XXE" },
 ];
