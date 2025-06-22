@@ -1,0 +1,11 @@
+{
+  "ctf": "CSAW",
+  "challenge": "scraper",
+  "description": "This is a test writeup for the CSAW scraper challenge.",
+  "tags": [
+    "web",
+    "crypto"
+  ],
+  "year": "2023",
+  "difficulty": "easy"
+}
