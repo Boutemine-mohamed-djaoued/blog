@@ -1,8 +1,4 @@
-import {
-  defineComponent,
-  hElement,
-  RouterLink,
-} from "../../node_modules/sleepyo/dist/sleepyo.js";
+import { defineComponent, hElement, RouterLink } from "../../public/sleepyo.js";
 
 const TOPICS = [
   { key: "accessControl", title: "Access Control" },

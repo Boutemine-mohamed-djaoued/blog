@@ -1,8 +1,4 @@
-import {
-  defineComponent,
-  hElement,
-  RouterLink,
-} from "../../node_modules/sleepyo/dist/sleepyo.js";
+import { defineComponent, hElement } from "../../public/sleepyo.js";
 import { fetchChallengeData } from "../../utils/parsers.js";
 import Challenge from "./Challenge.js";
 const CHALLENGES = [];
@@ -37,4 +33,3 @@ const Writeups = defineComponent({
 });
 
 export default Writeups;
-

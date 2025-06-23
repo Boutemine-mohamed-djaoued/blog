@@ -1,8 +1,4 @@
-import {
-  defineComponent,
-  hElement,
-  RouterLink,
-} from "../../node_modules/sleepyo/dist/sleepyo.js";
+import { defineComponent, hElement, RouterLink } from "../../public/sleepyo.js";
 
 const Navbar = defineComponent({
   render() {
@@ -11,7 +7,9 @@ const Navbar = defineComponent({
         hElement("div", { class: "navbar-logo" }, ["WebNap"]),
       ]),
       hElement("ul", { class: "navbar-links" }, [
-        hElement("li", { class : "home-link"}, [hElement(RouterLink, { to: "/" }, ["Home"])]),
+        hElement("li", { class: "home-link" }, [
+          hElement(RouterLink, { to: "/" }, ["Home"]),
+        ]),
         hElement("li", {}, [
           hElement(RouterLink, { to: "/notes/accessControl" }, ["Web Notes"]),
         ]),

@@ -1,11 +1,7 @@
-import {
-  defineComponent,
-  hElement,
-  RouterLink,
-} from "../../node_modules/sleepyo/dist/sleepyo.js";
+import { defineComponent, hElement } from "../../public/sleepyo.js";
+import { parseTypescriptFile } from "../../utils/parsers.js";
 import sideNav from "../layout/SideNav.js";
 import Topic from "./Topic.js";
-import { parseTypescriptFile } from "../../utils/parsers.js";
 
 const Notes = defineComponent({
   state() {

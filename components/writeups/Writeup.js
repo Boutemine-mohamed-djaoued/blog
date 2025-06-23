@@ -1,9 +1,4 @@
-import {
-  defineComponent,
-  hElement,
-  RouterLink,
-  hText,
-} from "../../node_modules/sleepyo/dist/sleepyo.js";
+import { defineComponent, hElement, RouterLink } from "../../public/sleepyo.js";
 import { fetchChallengeData } from "../../utils/parsers.js";
 
 const Writeup = defineComponent({

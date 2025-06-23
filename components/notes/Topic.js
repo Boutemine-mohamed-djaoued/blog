@@ -1,7 +1,4 @@
-import {
-  defineComponent,
-  hElement,
-} from "../../node_modules/sleepyo/dist/sleepyo.js";
+import { defineComponent, hElement } from "../../public/sleepyo.js";
 
 const Topic = defineComponent({
   render() {

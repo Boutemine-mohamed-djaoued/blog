@@ -1,16 +1,16 @@
 // Import your framework functions
+import HeroSection from "./components/hero/Hero.js";
+import Navbar from "./components/layout/Navbar.js";
+import Notes from "./components/notes/Notes.js";
+import Writeup from "./components/writeups/Writeup.js";
+import Writeups from "./components/writeups/Writeups.js";
 import {
   createApp,
   defineComponent,
-  hElement,
   HashRouter,
+  hElement,
   RouterOutlet,
-} from "./node_modules/sleepyo/dist/sleepyo.js";
-import Navbar from "./components/layout/Navbar.js";
-import HeroSection from "./components/hero/Hero.js";
-import Notes from "./components/notes/Notes.js";
-import Writeups from "./components/writeups/Writeups.js";
-import Writeup from "./components/writeups/Writeup.js";
+} from "./public/sleepyo.js";
 
 const routes = [
   { path: "/", component: HeroSection },

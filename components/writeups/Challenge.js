@@ -1,9 +1,4 @@
-import {
-  defineComponent,
-  hElement,
-  RouterLink,
-  hText,
-} from "../../node_modules/sleepyo/dist/sleepyo.js";
+import { defineComponent, hElement } from "../../public/sleepyo.js";
 
 const Challenge = defineComponent({
   render() {
