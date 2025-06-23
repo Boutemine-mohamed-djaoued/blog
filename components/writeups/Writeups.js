@@ -5,7 +5,7 @@ import {
 } from "../../node_modules/sleepyo/dist/sleepyo.js";
 import { fetchChallengeData } from "../../utils/parsers.js";
 import Challenge from "./Challenge.js";
-const CHALLENGES = ["scraper", "test2"];
+const CHALLENGES = [];
 
 const Writeups = defineComponent({
   state() {
@@ -22,9 +22,9 @@ const Writeups = defineComponent({
     this.updateState({ challenges: res });
   },
   render() {
-    if (!this.state.challenges) {
-      return hElement("div", { class: "loading" }, [
-        "There No Challenges Currently",
+    if (!this.state.challenges || this.state.challenges.length === 0) {
+      return hElement("div", { class: "empty" }, [
+        "There are No Writeups Currently",
       ]);
     }
 

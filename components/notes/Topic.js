@@ -7,7 +7,19 @@ const Topic = defineComponent({
   render() {
     const { title, sections } = this.props.topic;
     return hElement("main", { class: "topic" }, [
-      hElement("h1", {}, [title]),
+      hElement("div", { class: "topic-header" }, [
+        hElement("h1", {}, [title]),
+        hElement(
+          "button",
+          {
+            class: "burger",
+            on: {
+              click: () => this.emit("toggleSideNav"),
+            },
+          },
+          [hElement("i", { class: "fas fa-bars" })]
+        ),
+      ]),
       hElement("div", { class: "topic-sections" }, [
         ...sections.map(({ title, subsections }) => {
           return hElement("div", { class: "topic-section", key: title }, [

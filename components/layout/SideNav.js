@@ -29,16 +29,37 @@ const TOPICS = [
 
 const sideNav = defineComponent({
   render() {
-    return hElement("nav", { class: "side-nav" }, [
-      hElement("h2", {}, ["All Topics"]),
-      hElement("ul", {}, [
-        ...TOPICS.map((topic) => {
-          return hElement("li", { key: topic.key }, [
-            hElement(RouterLink, { to: `/notes/${topic.key}` }, [topic.title]),
-          ]);
-        }),
-      ]),
-    ]);
+    return hElement(
+      "nav",
+      { class: `side-nav ${this.props.openNav ? "open-nav" : null}` },
+      [
+        hElement("div", { class: "side-nav-header" }, [
+          hElement("h2", {}, ["All Topics"]),
+          hElement("i", {
+            class: "fas fa-times",
+            on: {
+              click: () => this.emit("toggleSideNav"),
+            },
+          }),
+        ]),
+        hElement("ul", {}, [
+          ...TOPICS.map((topic) => {
+            return hElement("li", { key: topic.key }, [
+              hElement(
+                RouterLink,
+                {
+                  to: `/notes/${topic.key}`,
+                  on: {
+                    click: () => console.log("ehll"),
+                  },
+                },
+                [topic.title]
+              ),
+            ]);
+          }),
+        ]),
+      ]
+    );
   },
 });
 

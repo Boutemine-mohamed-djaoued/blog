@@ -12,6 +12,7 @@ const Notes = defineComponent({
     return {
       currentTopic: null,
       handleChange: null,
+      openNav: false,
     };
   },
   async onMounted() {
@@ -30,14 +31,33 @@ const Notes = defineComponent({
   async onUnmounted() {
     this.appContext.router.unsubscribe(this.state.handleChange);
   },
+  handleNavChange() {
+    this.updateState({ openNav: !this.state.openNav });
+  },
   render() {
     if (!this.state.currentTopic) {
       return hElement("div", { class: "loading" }, [""]);
     }
-    return hElement("div", { class: "notes-page" }, [
-      hElement(sideNav, {}),
-      hElement(Topic, { topic: this.state.currentTopic }),
-    ]);
+    return hElement(
+      "div",
+      {
+        class: "notes-page",
+      },
+      [
+        hElement(sideNav, {
+          openNav: this.state.openNav,
+          on: {
+            toggleSideNav: this.handleNavChange,
+          },
+        }),
+        hElement(Topic, {
+          topic: this.state.currentTopic,
+          on: {
+            toggleSideNav: this.handleNavChange,
+          },
+        }),
+      ]
+    );
   },
 });
 
