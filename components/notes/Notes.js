@@ -32,7 +32,7 @@ const Notes = defineComponent({
   },
   render() {
     if (!this.state.currentTopic) {
-      return hElement("div", { class: "loading" }, [""]);
+      return hElement("div", { }, [""]);
     }
     return hElement(
       "div",
