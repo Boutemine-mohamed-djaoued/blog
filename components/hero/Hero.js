@@ -17,7 +17,7 @@ const HeroSection = defineComponent({
           ["Check my web notes"]
         ),
       ]),
-      hElement("img", { class: "hero-img", src: "../../public/assets/cyber.jpg" }, []),
+      hElement("img", { class: "hero-img", src: "./public/assets/cyber.jpg" }, []),
     ]);
   },
 });
