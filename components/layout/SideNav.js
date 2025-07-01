@@ -4,6 +4,7 @@ const TOPICS = [
   { key: "accessControl", title: "Access Control" },
   { key: "auth", title: "Authentication" },
   { key: "cachPoinsoning", title: "Cache Poisoning" },
+  { key: "cashDeception", title: "Cash Deception" },
   { key: "cmdInjectoin", title: "Command Injection" },
   { key: "fileUpload", title: "File Upload" },
   { key: "graphql", title: "GraphQL" },
