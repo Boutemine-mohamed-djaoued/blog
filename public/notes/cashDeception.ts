@@ -66,6 +66,7 @@
 // with cache server normalizing the path
 // /profile{delimiter}%2f%2e%2e%2findex.html
 //! Mitigation
+//* you need to :
 // Use Cache-Control to mark dynamic resources with private  or no-store
 // Verify that there aren't any discrepancies between how the origin server and the cache interpret URL paths.
 // Verity that content-type matches request's url file extentions
