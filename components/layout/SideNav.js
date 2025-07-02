@@ -6,6 +6,7 @@ const TOPICS = [
   { key: "cachPoinsoning", title: "Cache Poisoning" },
   { key: "cashDeception", title: "Cash Deception" },
   { key: "cmdInjectoin", title: "Command Injection" },
+  { key: "encoding", title: "Obfuscating using encodings" },
   { key: "fileUpload", title: "File Upload" },
   { key: "graphql", title: "GraphQL" },
   { key: "hostHeader", title: "Host Header Injection" },
