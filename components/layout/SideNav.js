@@ -13,6 +13,7 @@ const TOPICS = [
   { key: "infoDisclosure", title: "Information Disclosure" },
   { key: "jwt", title: "JWT" },
   { key: "noSqlInjection", title: "NoSQL Injection" },
+  { key: "OAuth", title: "OAuth" },
   { key: "prototypePolution", title: "Prototype Pollution" },
   { key: "raceConditions", title: "Race Conditions" },
   { key: "random", title: "Random" },
