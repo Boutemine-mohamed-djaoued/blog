@@ -39,3 +39,6 @@
 //* SQL CHAR() function
 // if select is banned
 // you can try : CHAR(83)+CHAR(69)+CHAR(76)+CHAR(69)+CHAR(67)+CHAR(84)
+
+
+
