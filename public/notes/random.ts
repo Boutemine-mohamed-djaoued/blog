@@ -4,15 +4,15 @@
 //"/(^uoftctf\\{f.*$)|(^u(.*?)*o(.*?)*f(.*?)*t(.*?)*c(.*?)*t(.*?)*f(.*?)*\\{(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*~$)/";
 // if the flag starts with uoftctf{f if would take short time otherwise a long time
 //* flusk cookies unsign
-// flask-unsign --decode --cookie '.eJyrVirKz0lVslIqLU4tUtIBU_GZKUpWlhB2XmIuSDYlK7E8MQUkXwqSVDJPtTBJNDc00zU2NUnUNUkyT9RNMrG01DVPMjZPNDKxsDQ1MFCqBQBVgxsW.aBRDdA.s0iy6hu9VT4nHbM_EuG1fRE_gTo'
-// flask-unsign --unsign --cookie 'eyJiZWFyZXIiOiJob2xsb3drbmlnaHQifQ.aBTYZw.lYRbnl-t7iEejsaXaOOvE5xmJcc' --wordlist 'flask.txt'
+// flask-unsign --decode --cookie 'eyJ1c2VyX2lkIjozMjY4M30.aGk7cA.o6P2dB1WUAle1r-2pYWgPgRbMaA'
+// flask-unsign --unsign --cookie 'eyJ1c2VyX2lkIjoyNzIwN30.aGpkbw.-cTYSAOjKPBeXwN--B2S9pQSi78' --wordlist 'flask.txt'
 // flask-unsign --sign --cookie "{'role' : 'admin'}" --secret theabyss
 //* flask Console RCE
 // go to /console
 // https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/werkzeug.html
 //* directory enumeration
 // gobuster -u https://vm1.ctfeldjazair.dz:12335/ -w /home/sleepwell/ctf/Directories_All.txt  -t 30
-// gobuster -u vm1.ctfeldjazair.dz:12300/ -w /home/sleepwell/ctf/Directories_All.txt
+// gobuster -u flagdoor-cdsdwf9w.blitzhack.xyz/ -w /home/sleepwell/ctf/Directories_All.txt
 //* YAML
 // no can be interpreted as boolean value
 //* chmod 000 *

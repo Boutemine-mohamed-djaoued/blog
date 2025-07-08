@@ -15,3 +15,14 @@
 // then upload the actual file file.txt
 // GIF89a
 // <?php passthru($_GET['cmd']); ?>
+//* bypass whitlist only extensions
+// by adding filename with extended filename*
+// ex:
+// filename="image.png";
+//  filename*=UTF-8''attack.svg
+// if there is a reverse proxy doing the filtering, it might see the first filename
+// and the server will see the second one
+// the space at the beginning of the filename* makes the reverse proxy not interpret it
+// the results uploading attack.svg as an image
+
+
