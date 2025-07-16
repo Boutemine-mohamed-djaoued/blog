@@ -28,6 +28,9 @@
 // %0D%0A%0D%0A => end of stream
 //* XPath injection
 //  query f"/military/district/staff[name='Groorg' and starts-with(selfDestructCode, 'H') or '1'='1']"
+//* LDAP injection
+// wild card *
+// if () trigger and error its vulnarable
 //! usefull websites
 //* hash cracker
 // https://crackstation.net/
@@ -35,3 +38,5 @@
 // https://app.beeceptor.com/console/iwillneverreapeat
 //* proxy without security page
 // ssh -R 80:localhost:4000 localhost.run
+//* DNS rebinding
+// https://lock.cmpxchg8b.com/rebinder.html

