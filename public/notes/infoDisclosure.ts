@@ -48,7 +48,7 @@
 // you need to add academy.htb to your /etc/hosts file first
 // ffuf -w subdomains-top1million-5000.txt:FUZZ -u http://academy.htb:PORT/ -H 'Host: FUZZ.academy.htb'
 //? Vhosts vs. Sub-domains
-//The key difference between VHosts and sub-domains is that a VHost is basically a 'sub-domain' served on the same server and has the same IP, such that a single IP could be serving two or more different websites.
+// The key difference between VHosts and sub-domains is that a VHost is basically a 'sub-domain' served on the same server and has the same IP, such that a single IP could be serving two or more different websites.
 //* scanning parameters (GET)
 //  ffuf -w burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php?FUZZ=key -fs xxx
 //  ffuf -w burp-parameter-names.txt:FUZZ -u http://faculty.academy.htb:55792/courses/linux-security.php7?FUZZ=key -fs xxx

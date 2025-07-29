@@ -1,6 +1,6 @@
 // Cross-site Scripting
 //! XSS types
-//* reflected xss
+//*   
 // we have : https://example.com/search=hello
 // rendered as <p> hello </p>
 // using : https://example.com/search=<img+src=1+onerror="alert(1)"/>
