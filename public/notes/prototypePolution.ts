@@ -14,3 +14,6 @@
 // select prototype pullotion option
 // scan for gadgets
 // expoit
+//* filtered __proto__
+// usually they forget the .constructor.prototype
+// which also lead to the prototype

