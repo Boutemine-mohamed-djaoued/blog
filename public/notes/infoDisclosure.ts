@@ -51,10 +51,9 @@
 // The key difference between VHosts and sub-domains is that a VHost is basically a 'sub-domain' served on the same server and has the same IP, such that a single IP could be serving two or more different websites.
 //* scanning parameters (GET)
 //  ffuf -w burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php?FUZZ=key -fs xxx
-//  ffuf -w burp-parameter-names.txt:FUZZ -u http://faculty.academy.htb:55792/courses/linux-security.php7?FUZZ=key -fs xxx
-
 //? note :
 // we use -fs xxx to filter out the wrong response size
 //* scanning parameters (POST)
 // ffuf -w burp-parameter-names.txt:FUZZ -u http://admin.academy.htb:PORT/admin/admin.php -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
-// ffuf -w burp-parameter-names.txt:FUZZ -u http://faculty.academy.htb:55792/courses/linux-security.php7 -X POST -d 'FUZZ=key' -H 'Content-Type: application/x-www-form-urlencoded' -fs xxx
+
+

