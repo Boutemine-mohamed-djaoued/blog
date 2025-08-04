@@ -15,6 +15,7 @@ const TOPICS = [
   { key: "httpReqSmuggling", title: "HTTP Request Smuggling" },
   { key: "infoDisclosure", title: "Information Disclosure" },
   { key: "jwt", title: "JWT" },
+  { key: "lfi", title: "LFI" },
   { key: "noSqlInjection", title: "NoSQL Injection" },
   { key: "OAuth", title: "OAuth" },
   { key: "prototypePolution", title: "Prototype Pollution" },
