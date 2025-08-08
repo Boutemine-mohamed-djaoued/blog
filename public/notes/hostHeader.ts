@@ -26,6 +26,12 @@
 // some systems perform validation only on Host of the first request
 // but if you send another one in the same connection it does not get validated
 // using Send group (single connection) in burpsuite
+//* Password reset poisoning
+// if the app sends a password reset link to the email address
+// and the link contains the Host header
+// you can poison the host header to contain your domain so if the user clicks the link
+// you will get a request to your server
+// and steal the password reset token
 //? for more examples
 // https://portswigger.net/research/cracking-the-lens-targeting-https-hidden-attack-surface
 //! Mitigating

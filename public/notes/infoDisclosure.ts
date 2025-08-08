@@ -6,6 +6,8 @@
 // /cgi-bin/phpinfo.php
 //* Source code disclosure via backup files
 // /index.php~ or /index.php.bak
+//* web service definition
+// /wsdl | /example.wsdl | /wsdl?wsdl
 //* Information disclosure due to insecure configuration
 // try TRACE /admin might get you more info
 //* Version control history

@@ -25,6 +25,7 @@ const TOPICS = [
   { key: "sqlInjection", title: "SQL Injection" },
   { key: "ssrf", title: "SSRF" },
   { key: "ssti", title: "SSTI" },
+  { key: "wordpress", title: "WordPress" },
   { key: "xss", title: "XSS " },
   { key: "xxe", title: "XXE" },
 ];
