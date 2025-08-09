@@ -23,9 +23,11 @@ const TOPICS = [
   { key: "random", title: "Random" },
   { key: "serializers", title: "Insecure Serializers" },
   { key: "sqlInjection", title: "SQL Injection" },
+  { key: "ssi", title: "SSI" },
   { key: "ssrf", title: "SSRF" },
   { key: "ssti", title: "SSTI" },
   { key: "wordpress", title: "WordPress" },
+  { key: "xslt", title: "XSLT" },
   { key: "xss", title: "XSS " },
   { key: "xxe", title: "XXE" },
 ];

