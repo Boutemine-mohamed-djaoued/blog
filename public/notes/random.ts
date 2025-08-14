@@ -1,7 +1,7 @@
 // Random stuff
 //! Exploits
 //* regex injection
-//"/(^uoftctf\\{f.*$)|(^u(.*?)*o(.*?)*f(.*?)*t(.*?)*c(.*?)*t(.*?)*f(.*?)*\\{(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*~$)/";
+// "/(^uoftctf\\{f.*$)|(^u(.*?)*o(.*?)*f(.*?)*t(.*?)*c(.*?)*t(.*?)*f(.*?)*\\{(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*~$)/";
 // if the flag starts with uoftctf{f if would take short time otherwise a long time
 //* flusk cookies unsign
 // flask-unsign --decode --cookie 'eyJ1c2VybmFtZSI6ImRqYXdhZCJ9.aJfDAA.gbbmHRcGbgjlD3mhxbBvaxONMrY'
@@ -32,6 +32,8 @@
 //* LDAP injection
 // wild card *
 // if () trigger and error its vulnarable
+//* Current directory
+// /proc/self/cwd
 //! usefull websites
 //* hash cracker
 // https://crackstation.net/

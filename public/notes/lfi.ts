@@ -6,6 +6,8 @@
 // ../ => %2e%2e%2f
 // maybe there is a dynamic route
 // /get_file/<file_name> =>  /get_file/..%2f..%2f..%2fetc%2fpasswd
+//* Double url encoding
+// ../ => ..%252f
 //* Added .php in the path
 // whatever you enter you get /etc/passwd.php
 // since the max length in php strings is 4096
