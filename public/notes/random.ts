@@ -34,6 +34,9 @@
 // if () trigger and error its vulnarable
 //* Current directory
 // /proc/self/cwd
+//* Php
+// preg_match() will return false if there are more then 21750 matches in the regex
+// php will throw an error if there are more than 1000 queries in the request
 //! usefull websites
 //* hash cracker
 // https://crackstation.net/
