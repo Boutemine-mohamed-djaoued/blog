@@ -46,5 +46,8 @@
 // ssh -R 80:localhost:4000 localhost.run
 //* DNS rebinding
 // https://lock.cmpxchg8b.com/rebinder.html
+// http://1u.ms/
 //* JavaScript Deobfuscator and Unpacker
 // https://de4js.kshift.me/
+
+

