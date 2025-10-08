@@ -44,6 +44,7 @@
 // https://app.beeceptor.com/console/iwillneverreapeat
 //* proxy without security page
 // ssh -R 80:localhost:4000 localhost.run
+// ssh -R 80:localhost:8080 serveo.net
 //* DNS rebinding
 // https://lock.cmpxchg8b.com/rebinder.html
 // http://1u.ms/
