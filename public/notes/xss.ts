@@ -118,4 +118,5 @@
 //* XSStrike
 // at ctf/XSStrike
 // python3 xsstrike.py -u "http://SERVER_IP:PORT/index.php?task=test"
-
+//* CspBypass
+// https://cspbypass.com/

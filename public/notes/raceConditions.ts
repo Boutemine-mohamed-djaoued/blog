@@ -29,3 +29,8 @@
 // def handleResponse(req, interesting):
 // table.add(req)
 
+//* Methodology
+// predict
+// probe (test nomal requests then parallel requests)
+// exploit
+

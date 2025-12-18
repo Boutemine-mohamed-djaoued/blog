@@ -3,16 +3,18 @@
 //* regex injection
 // "/(^uoftctf\\{f.*$)|(^u(.*?)*o(.*?)*f(.*?)*t(.*?)*c(.*?)*t(.*?)*f(.*?)*\\{(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*(.*?)*~$)/";
 // if the flag starts with uoftctf{f if would take short time otherwise a long time
+// ^(?=HTB{f)(((([a-zA-Z0-9{_])*)*)*)$
+// if the flag starts with HTB{f if would take long time otherwise a short time
 //* flusk cookies unsign
-// flask-unsign --decode --cookie 'eyJ1c2VybmFtZSI6ImRqYXdhZCJ9.aJfDAA.gbbmHRcGbgjlD3mhxbBvaxONMrY'
-// flask-unsign --unsign --cookie 'eyJ1c2VybmFtZSI6ImRqYXdhZCJ9.aJfDAA.gbbmHRcGbgjlD3mhxbBvaxONMrY' --wordlist 'flask.txt'
+// flask-unsign --decode --cookie 'eyJfZmxhc2hlcyI6W3siIHQiOlsibWVzc2FnZSIsIkludmFsaWQgY3JlZGVudGlhbHMuIFBsZWFzZSB0cnkgYWdhaW4uIl19XX0.aTC_CA.ZJ2lGWYijX-IXpcR36Ox2VeawL8'
+// flask-unsign --unsign --cookie '.eJxFjEEKgDAMBL-ie-4L-gZ_IEVE01iILTTNSfp3exA8LTMw-2CLsutFCr8-mNoYqB0HqcJhKZzy9HE0mRF6cBgJw2cTcZDCTOeWMnyrRg61CMGDjbSNC1Oqeb9_1V8F6ies.aSMmOQ.XpsfjpEWKdpEJ7Sbv60Q90S8Xyo' --wordlist 'flask.txt'
 // flask-unsign --sign --cookie "{'role' : 'admin'}" --secret theabyss
 //* flask Console RCE
 // go to /console
 // https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/werkzeug.html
 //* directory enumeration
-// gobuster -u https://vm1.ctfeldjazair.dz:12335/ -w /home/sleepwell/ctf/Directories_All.txt  -t 30
-// gobuster -u 94.237.57.115:55013 -w /home/sleepwell/ctf/Directories_All.txt
+// gobuster -u ctf.nexus-security.club:3999 -w /home/sleepwell/ctf/Directories_All.txt  -t 30
+// gobuster dir ctf.nexus-security.club:3999 -w /home/sleepwell/ctf/Directories_All.txt
 //* YAML
 // no can be interpreted as boolean value
 //* chmod 000 *
@@ -37,6 +39,7 @@
 //* Php
 // preg_match() will return false if there are more then 21750 matches in the regex
 // php will throw an error if there are more than 1000 queries in the request
+// json_decode in php decodes unicode sequences by default
 //! usefull websites
 //* hash cracker
 // https://crackstation.net/
