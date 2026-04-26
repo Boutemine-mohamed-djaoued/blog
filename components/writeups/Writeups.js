@@ -1,7 +1,7 @@
 import { defineComponent, hElement } from "../../public/sleepyo.js";
 import { fetchChallengeData } from "../../utils/parsers.js";
 import Challenge from "./Challenge.js";
-const CHALLENGES = [];
+const CHALLENGES = ["aura-farm", "mario-kart"];
 
 const Writeups = defineComponent({
   state() {

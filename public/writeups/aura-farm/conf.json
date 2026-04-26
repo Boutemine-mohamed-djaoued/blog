@@ -1,0 +1,9 @@
+{
+  "slug": "aura-farm",
+  "ctf": "IngeHack",
+  "challenge": "Aura Farm",
+  "description": "A client-side web challenge abusing a missing postMessage origin check, a javascript: redirect sink, and a PHP header bypass.",
+  "tags": ["web"],
+  "year": "2026",
+  "difficulty": "hard"
+}

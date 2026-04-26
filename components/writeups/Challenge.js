@@ -2,7 +2,7 @@ import { defineComponent, hElement } from "../../public/sleepyo.js";
 
 const Challenge = defineComponent({
   render() {
-    const { ctf, challenge, description, tags, year, difficulty } =
+    const { ctf, challenge, description, tags, year, difficulty, slug } =
       this.props.challenge;
 
     return hElement(
@@ -11,7 +11,7 @@ const Challenge = defineComponent({
         class: "challenge-card",
         on: {
           click: () => {
-            this.appContext.router.navigateTo(`/writeups/${challenge}`);
+            this.appContext.router.navigateTo(`/writeups/${slug || challenge}`);
           },
         },
       },

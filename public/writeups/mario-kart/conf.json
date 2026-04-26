@@ -1,0 +1,9 @@
+{
+  "slug": "mario-kart",
+  "ctf": "IngeHack",
+  "challenge": "Mario Kart",
+  "description": "Abuse a race condition in account registration to stack multiple garage bonuses into one shared wallet.",
+  "tags": ["web"],
+  "year": "2026",
+  "difficulty": "medium"
+}
