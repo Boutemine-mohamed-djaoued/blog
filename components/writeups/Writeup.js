@@ -12,6 +12,9 @@ const Writeup = defineComponent({
     const res = await fetchChallengeData(`./public/writeups/${challenge}`);
     this.updateState({ challenge: res });
     document.querySelector(".markdown-body").innerHTML = res.readme;
+    document.querySelectorAll(".markdown-body pre code").forEach((block) => {
+      window.hljs?.highlightElement(block);
+    });
   },
   render() {
     if (!this.state.challenge) return hElement("div", {}, []);
