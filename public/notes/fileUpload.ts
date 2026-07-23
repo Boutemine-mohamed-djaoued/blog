@@ -33,6 +33,8 @@
 //        echo "shell.jpg$ext$char" >> wordlist.txt
 //    done
 // done
+
+
 //* bypass whitlist only extensions
 // by adding filename with extended filename*
 // ex:

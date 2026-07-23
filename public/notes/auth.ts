@@ -35,6 +35,6 @@
 // ./username-anarchy first_name last_name
 //* cupp
 // for passwords
-// cupp -i
+// cupp -ie
 
 

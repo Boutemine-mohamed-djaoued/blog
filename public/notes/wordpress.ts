@@ -31,6 +31,6 @@
 // </methodCall>
 //! WPScan
 //* Generale scan
-// wpscan --url http://blog.inlanefreight.com --enumerate --api-token {api-key}
+// wpscan --url http://blog.inlanefreight.com --enumerate --api-token 9ZRmbOYokbdS4VicjQDL6vGEdR7bnmoiLpBY3jWIzOU
 //* Password brute force
 // wpscan --password-attack xmlrpc -t 20 -U admin, david -P 2023-200_most_used_passwords.txt --url http://blog.inlanefreight.com
