@@ -5,6 +5,10 @@
 //* Important directories
 // always look for directories with listing enabled
 // wp-content => themes, plugins, uploads
+//* plugins
+//  curl -s http://blog.inlanefreight.local/?p=1 | grep plugins
+//* plugin details
+// at /wp-content/plugins/{plugin-name}/readme.txt
 //* Roles
 // Administrator | Editor | Author | Contributor | Subscriber
 //* Calling a method
